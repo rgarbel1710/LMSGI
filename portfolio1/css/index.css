@@ -24,7 +24,7 @@ body {
 header {
     height: 12vh; /* medidas absolutas */
    /* width: 50vw; */
-    background-color: blue;
+    background-color: green;
     text-align: center;
     /* flexbox */
     display: flex; /* modelo de cajas flexibles: contenedor flexible */
