@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+  
+}
+
+header{
+    background-color: #000;
+    height: 8vh;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+header #menu{
+    color: white;
+    flex-basis: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header #menu i{
+    color: white;
+    font-size: 30px
+
+}
+header figure{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+header figure img{
+    height: 100%;
+}
+header form{
+    flex-basis: 25%;
+    
+}
+header form input{
+    width: 100%;
+    background-color: #eee;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+}
+header nav{
+    display: flex;
+    gap: 20px;
+}
+header nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+   
+}
+header nav a:hover{
+    color: #d6ff69;
+}
+
+header #carrito{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    color: wheat;
+}
+header #carrito i{
+    font-size: 22px;
+    cursor: pointer;
+    color: white;
+}
+ main {
+    margin-top: 20px;
+    padding: 20px;
+}
+nav a {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+}
+#producto {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    gap: 30px;
+    align-items: center;
+}
+
+#imagen-producto img {
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#info-producto {
+    max-width: 500px;
+}
+
+#info-producto h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+#info-producto p {
+font-size: 16px;
+color: #555;
+}
