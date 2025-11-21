@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PowerPlanet</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/detalle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
 </head>
@@ -31,45 +31,61 @@
         <i class="fa-solid fa-cart-shopping"></i>
         <i class="fa-solid fa-user"></i>
         </div>
-
     </header>
-    <main>
-        <h2>Listado de Productos que provienen de la API (BD) </h2>
-        <section id="catalogo">
-            <article>
-                <p class="badge">Envio gratis</p>
-                <figure>
-                <img src="imagen/productos/movil.png" alt="Prductos">
-                </figure>
-                <p class="nombre">Xiaomi Azul - Teléfono móvil </p>
-                <p class="features">12 4GB/128GB</p>
-                <p class="valoraciones">
-                    <span class="star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </span>
-                    <span class="valoracion">44</span>
-                    <span class="opiniones">(7 opiniones)</span> 
-                </p>
-                <div>
-                    <span class="dto">-15%</span>
-                    <span class="precios">
-                        <span class="pvr">49.99€</span>
-                        <span class="precio">34.99€</span>
-                </span>
-                </div>
-                 <p class="stock">Stock</p>
-            </article>
-            
+       <main>
+        <nav>
+            <a href="#">
+                <i class="fa-regular fa-house"></i>
+                <span>Home</span>
+            </a>
 
-             
-   
-     </main>
-     
-    <footer> 
+            <a href="#">
+                <i class="fa-solid fa-desktop"></i>
+                <span>Informática</span>
+            </a>
+                    
+            <a href="#">
+                <i class="fa-solid fa-laptop"></i>
+                <span>Ordenadores portátiles</span>
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-laptop"></i>
+                <span>Ordenadores portátiles Mac</span>
+            </a>
+            <strong>MacBook Air M2</strong>
+        </nav>
+        <section id="producto">
+        
+        
+            <figure id="imagen-producto"></figure>
+                
+            </figure>
+
+            <div id="info-producto">
+                <h1>MacBook Air M2</h1>
+                <p>
+                    <span id="precio-actual">1199€</span>
+                    <span id="precio-original">1299€</span>
+                    <span id="descuento">-8%</span>
+                </p>
+                <p>
+                    <span>4.9 (210 opiniones)</span>
+                </p>
+                <ul>
+                    <li><strong>CPU:</strong> Apple M2</li>
+                    <li><strong>RAM:</strong> 8 GB</li>
+                    <li><strong>Disco:</strong> 512 GB SSD</li>
+
+                </ul>
+
+                <button id="btn-carrito">Añadir al carrito</button>
+
+
+            </div>
+        </section>
+
+    </main>
+    <footer>
         <nav id="Sociales">
         <a href="#"><i class="fa-brands fa-instagram"></i></a>
         <a href="#"><i class="fa-brands fa-facebook"></i></a>
@@ -206,75 +222,7 @@
                 </a>
              </nav>
         </article>
-
     </footer>
 </body>
 </html>
-<script>
-
-    function generarEstrellas(valoracion) {
-        let estrellasHTML = '';
-
-        for (let i = 1; i <= 5; i++) {
-        if (i <= valoracion) {
-            estrellasHTML += '<i class="fa-solid fa-star"></i>';
-        } else {
-            estrellasHTML += '<i class="fa-regular fa-star"></i>';
-        }
-        }
-
-        return estrellasHTML;
-    }
-    //Manipular el HMTL(usuario) <--> DOM (navegador) 
-    //fectch es un funcion JS para leer un archivo JSON o
-    //hacer una peticion http a una API
-    fetch('data/productos.json') //idem peticion a la api (BD)
-        .then(response => response.json())
-        .then(productos => {
-            //codigo js
-            const contenedor = document.getElementById('catalogo');
-            /* 
-                productos tiene todo el array de objetos json
-            */
-            // iterar RECORRER todos los productos del array
-            // se ejecutara tantas veces como productos (obejtos) haya en el array
-            // JS --> JS Moderno (EmacsScript 6)
-            //el array productos se recorre con un buble forEach
-            productos.forEach (producto => {
-                //crear un objeto (nodo en html) <article>
-                //el objeto document (JS) y sirve para que JS acceda L/W al DOM del HTML
-                const tarjeta = document.createElement('article'); //crea un nodo html --> <article> </article>
-                //contenedor.innerHTML = `Catalogo de Productos`;
-                //con innerHTML escribo el contenido del nodo <article> creado anteriormente
-                tarjeta.innerHTML = 
-                `
-                    <a href="detalle1.html?id=${producto.id}" class="tarjeta">
-                    <p class="badge">Envio gratis</p>
-                    <figure>
-                        <img src="${producto.imagen}" alt="Producto 1" />
-                    </figure>
-                    <p class="nombre">${producto.nombre}</p>
-                    <p class="features">
-                        <span>${producto.caracteristicas.cpu}</span>
-                        <span>${producto.caracteristicas.ram}</span> 
-                        <span>${producto.caracteristicas.disco}</span> 
-                    </p>
-                    <p class="valoraciones">
-                        <span class="star">
-                            ${generarEstrellas(producto.valoracion)}
-                        </span>
-                        <span class="valoracion">${producto.valoracion}</span>
-                        <span class="valoraciones">${producto.opiniones}</span>
-                    </p>
-                    <div>
-                        <span class="dto">-${producto.descuento}%</span>
-                        <span class="precios">
-                            <span class="pvr">${producto.precioOriginal}€</span>
-                            <span class="pvp">${producto.precio}€</span>
-                        </span>
-                    </div>
-                `;
-                contenedor.appendChild(tarjeta)
-            })
-        })
-</script>
+    
