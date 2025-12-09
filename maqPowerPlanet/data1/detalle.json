@@ -1,0 +1,17 @@
+{
+  "nombre": "MacBook Air M2 256GB",
+  "precioFinal": "899",
+  "precioOriginal": "1199",
+  "descuento": "-17%",
+  "opiniones": "128 opiniones",
+  "calificacion": "5.00",
+  "capacidad": "256GB",
+  "imagenPrincipal":"imagen/mac1.jpg",
+
+  "galeria": [
+      "imagen/mac1.jpg",
+      "imagen/mac2.jpg",
+      "imagen/mac3.jpg"
+  ]
+}
+

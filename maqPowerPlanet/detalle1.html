@@ -1,228 +1,204 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PowerPlanet</title>
-    <link rel="stylesheet" href="css/detalle.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detalle Producto - PowerPlanet</title>
+<link rel="stylesheet" href="css/detalle.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
     <header>
-        <div id="menu"> 
-           <i class="fa-solid fa-bars"></i> <!--  enlace de awesome -->
+        <div id="menu">
+            <i class="fa-solid fa-bars"></i>
         </div>
 
-        <figure> 
-            <img src="imagen/logo.png" alt="logo">
+        <figure>
+            <img src="imagen/logo.png" alt="Logo">
         </figure>
-        <form>
-            <input type="search" placeholder="Buscar...">
-        </form>
 
-        <nav>
-            <a href="#">Ofertas Limitadas</a>
-            <a href="#">Contactanos</a>
-            <a a href="#">ES</a>
-        </nav>
+    <form>
+        <input type="search" placeholder="Buscar...">
+    </form>
 
-        <div id="carrito">
-        <i class="fa-solid fa-cart-shopping"></i>
+    <nav>
+        <a href="#">Ofertas limitadas</a>
+        <a href="#">Contáctanos</a>
+        <a a href="#">ES</a>
+    </nav>
+
+    <div id="carrito">
         <i class="fa-solid fa-user"></i>
+        <i class="fa-solid fa-cart-shopping"></i>
+    </div>
+</header>
+
+<main>
+    <nav class="home">
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+        </a>
+        <a href="#">
+            <span>Home > Informatica > Ordenadores > Portátiles</span>
+        </a>
+    </nav>
+
+   <!--Miniaturas-->
+    <figure class="galeria">
+        <img id="imagen-galeria" src="imagen/mac1.jpg" alt="Mini 1">
+        <img id="imagen-galeria" src="imagen/mac2.jpg" alt="Mini 2">
+        <img id="imagen-galeria" src="imagen/mac3.jpg" alt="Mini 3">
+    </figure>
+
+     <!--Imagen principal-->
+
+    <figure class="col-imagen-principal">
+        <div class="etiqueta">
+            <h2>FRESH</h2>
+            <h2 class="titulo-friday">FRIDAY</h2>
         </div>
-    </header>
-       <main>
-        <nav>
-            <a href="#">
-                <i class="fa-regular fa-house"></i>
-                <span>Home</span>
-            </a>
+        <img id="imagen-principal" src="imagen/mac1.jpg" alt="Producto">
+    </figure>
 
-            <a href="#">
-                <i class="fa-solid fa-desktop"></i>
-                <span>Informática</span>
-            </a>
-                    
-            <a href="#">
-                <i class="fa-solid fa-laptop"></i>
-                <span>Ordenadores portátiles</span>
-            </a>
-            <a href="#">
-                <i class="fa-solid fa-laptop"></i>
-                <span>Ordenadores portátiles Mac</span>
-            </a>
-            <strong>MacBook Air M2</strong>
-        </nav>
-        <section id="producto">
-        
-        
-            <figure id="imagen-producto"></figure>
-                
-            </figure>
+      <!--Detalles-->
+    <article class="col-detalles">
 
-            <div id="info-producto">
-                <h1>MacBook Air M2</h1>
-                <p>
-                    <span id="precio-actual">1199€</span>
-                    <span id="precio-original">1299€</span>
-                    <span id="descuento">-8%</span>
-                </p>
-                <p>
-                    <span>4.9 (210 opiniones)</span>
-                </p>
-                <ul>
-                    <li><strong>CPU:</strong> Apple M2</li>
-                    <li><strong>RAM:</strong> 8 GB</li>
-                    <li><strong>Disco:</strong> 512 GB SSD</li>
+        <h1 id="nombre-producto"></h1>
 
-                </ul>
+        <div class="valoraciones">
+        <span class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+        </span>
+        <span class="calificacion" id="calificacion"></span>
+        <span class="opiniones" id="opiniones"></span>
+    </div>
 
-                <button id="btn-carrito">Añadir al carrito</button>
-
-
+    <div class="precio-block">
+        <span class="etiqueta-dto" id="descuento"></span>
+        <span class="precio-original" id="precio-original"></span>
+        <span class="precio-grande" id="precio-final"></span>
+    </div>
+    <p class="precio-mini">
+        Precio recomendado: 
+        <span id="precio-tachado"></span> 
+        <span>(i)</span>
+    </p>
+    <p class="precio-mini iva-texto">Los precios incluyen IVA</p>
+ 
+      <!--Stock-->
+    <div class="caja-stock">
+        <div class="fila-stock">
+            <div class="icono-circulo">
+            <i class="fa-solid fa-truck"></i>
             </div>
-        </section>
-
-    </main>
-    <footer>
-        <nav id="Sociales">
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-        <a href="#"><i class="fa-brands fa-youtube"></i></a>
-        </nav>
-
-        <div id="Suscribete">
-            <h2>¡SUSCRIBETE A POWEROFERTAS!</h2>
-            <input type="email" placeholder="Intruduce tu email">
+    
+            <p class="texto-disponibilidad">
+                Disponibilidad: 
+            <span class="texto-en-stock">¡En stock! Recíbelo mañana Jueves</span>
+            </p>
         </div>
-        <article>
-             <h2>Condiciones de Compra</h2>
-             <nav>
-                <a href="#">
-                    <i class="fa-solid fa-truck-fast"></i>
-                    <span>¿Qué envíos hay disponibles en Powerplanet?</span>
-                </a>
-                 <a href="#">
-                    <i class="fa-solid fa-calendar"></i>
-                   <span>¿Cómo puedo Pagar a plazos en Powerplanet?</span>
-                </a>
+    </div>
+   
+    <div class="fila-stock">
+        <div class="icono-circulo">
+            <i class="fa-solid fa-box-open"></i>
+    </div>
 
-                <a href="#">
-                   <i class="fa-solid fa-phone"></i>
-                   <span>Condiciones generales</span>
-                </a>
-                  
-                <a href="#">
-                    <i class="fa-solid fa-wrench"></i>
-                    <span>Devoluciones, Garantías y reparación</span>
+    <div>
+        <p class="envio-texto">
+            Envío: <span class="envio-gratis">¡Gratis!</span>
+        </p>
+    
+    </div>
 
-                    </a>
-                <a href="#">
-                    <i class="fa-solid fa-lock"></i>
-                    <span>Política de privacidad</span>
+    </div>
+        <div class="texto-extra">
+        Devolución Gratis: Hasta 8 de Febrero <br> 
+        Garantía: 1 año
+        </div>
+    </div>
 
-                </a>
-                <a href="#">
-                    <i class="fa-solid fa-cookie-bite"></i>
-                    <span>Política de cookies</span>
-                </a>
-                <a href="#">
-                    <i class="fa-solid fa-tablet"></i>
-                    <span>¡Compra desde la APP! Más ventajas</span>
-                </a>
-                <a href="#">
-                    <i class="fa-solid fa-suitcase"></i>
-                    <span>Empleo</span>
+      <!--Banner-->
 
-                </a>
+    <div class="banner-negro">
+        <span>Ya disponible nuestro <strong>FRESH FRIDAY</strong> </span>
+        <button>VER OFERTAS </button>
+    </div>
 
-                <a href="#">
-                    <i class="fa-solid fa-school"></i>
-                    <span>Centros educativos y administraciones públicas</span>
-                </a>
-             </nav>
-        </article>
-        <article>
-             <h2>Distribuidores</h2>
-             <nav>
-                 <a href="#">
-                    <i class="fa-solid fa-question"></i>
-                    <span>Qué envíos hay disponibles en Powerplanet</span>
-                </a>
+      <!--Opcciones-->
 
-                <a href="#">
-                    <i class="fa-solid fa-biohazard"></i>
-                    <span>Quienes somos</span>
-                    
-                 <a href="#">
-                    <i class="fa-brands fa-sellsy"></i>
-                    <span>Tienda fisica de Totana</span>
-                </a>
-                </a>
-             </nav>
-        </article>
-        <article>
-             <h2>Informacion General</h2>
-             <nav>
-                <a href="#">
-                    <i class="fa-solid fa-question"></i>
-                    <span>Qué envíos hay disponibles en Powerplanet</span>
-                </a>
+    <div class="selectores-area">
 
-                <a href="#">
-                    <i class="fa-solid fa-biohazard"></i>
-                    <span>Quienes somos</span>
-                </a>
+        <p>Capacidad: <strong id="Capacidad"></strong></p>
 
-                <a href="#">
-                    <i class="fa-brands fa-sellsy"></i>
-                    <span>Tienda fisica de Totana</span>
-                </a>
+        <div class="botones-opciones">
+            <button class="btn-opcion active" id="256GB">256GB</button>
+            <button class="btn-opcion" id="512GB">512GB</button>
+        </div>
 
-                <a href="#">
-                    <i class="fa-brands fa-square-letterboxd"></i>
-                    <span>Opiniones</span> 
-                </a>
+    <p>Color: </p>
+    <div class="botones-opciones">
+        <button class="btn-opcion">Plata Estado Excelente</button>
+        <button class="btn-opcion active">Azul Pacífico Estado Excelente</button>
+        <button class="btn-opcion">Oro Estado Excelente</button>
+    </div>
+    </div>
 
-                <a href="#">
-                    <i class="fa-solid fa-truck-fast"></i>
-                    <span>Preguntas frecuentes</span>
-                </a>
+      <!--Compra-->
 
-                <a href="#">
-                    <i class="fa-solid fa-blog"></i>
-                    <span>Blog</span>
-                </a>
+    <div class="area-compra">
+        <input type="number" id="cantidad" value="1" min="1"> <!--permite poner un numero, valor inicial 1, minimo 1-->
+        <button class="btn-comprar">¡COMPRAR AHORA!</button>
+    </div>
 
-                <a href="#">
-                    <i class="fa-solid fa-power-off"></i>
-                    <span>Power Days</span>
-                </a>
+    <div class="links-bajos">
+        <a href="#">
+            <i class="fa-regular fa-bookmark"></i> Guardar</a>
+        <a href="#">
+            <i class="fa-solid fa-share-nodes"></i> Compartir</a>
+    </div>
 
-                <a href="#">
-                    <i class="fa-brands fa-black-tie"></i>
-                    <span>Black Friday</span>
-                </a>
+    </article>
+</main>
+<script>
 
-                <a href="#">
-                    <i class="fa-solid fa-robot"></i>
-                    <span>Cyber Monday</span>
-                </a>
+fetch("data1/detalle.json")
+    .then(res => res.json())
+    .then(producto => {
 
-                <a href="#">
-                    <i class="fa-solid fa-marker"></i>
-                    <span>Marcas</span>
-                </a>
+        // Título
+        document.getElementById("nombre-producto").textContent = producto.nombre;
 
-                <a href="#">
-                    <i class="fa-brands fa-product-hunt"></i>
-                    <span> Programa de Afiliados</span>
-                </a>
-             </nav>
-        </article>
-    </footer>
+        // Precios y descuento
+        document.getElementById("precio-final").textContent = producto.precioFinal;
+        document.getElementById("precio-original").textContent = producto.precioOriginal;
+        document.getElementById("descuento").textContent = producto.descuento;
+
+        // Valoraciones
+        document.getElementById("opiniones").textContent = producto.opiniones;
+        document.getElementById("calificacion").textContent = producto.calificacion;
+
+        // Capacidad
+        document.getElementById("Capacidad").textContent = producto.capacidad;
+
+        // Imagen principal
+        document.getElementById("imagen-principal").src = producto.imagenPrincipal;
+
+        // Galeria
+        const miniaturas  = document.querySelectorAll(".galeria img");
+        producto.galeria.forEach((img, i) => {
+            if (miniaturas[i]) miniaturas[i].src = img;
+        });
+    })
+    .catch(error => console.error("Error cargando producto:", error));
+    
+    
+</script>
 </body>
 </html>
-    
+
