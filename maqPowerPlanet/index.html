@@ -230,7 +230,7 @@
     //Manipular el HMTL(usuario) <--> DOM (navegador) 
     //fectch es un funcion JS para leer un archivo JSON o
     //hacer una peticion http a una API
-    fetch('data/productos.json') //idem peticion a la api (BD)
+    fetch('data1/productos.json') //idem peticion a la api (BD)
         .then(response => response.json())
         .then(productos => {
             //codigo js
@@ -250,7 +250,7 @@
                 //con innerHTML escribo el contenido del nodo <article> creado anteriormente
                 tarjeta.innerHTML = 
                 `
-                    <a href="detalle1.html?id=${producto.id}" class="tarjeta">
+                   
                     <p class="badge">Envio gratis</p>
                     <figure>
                         <img src="${producto.imagen}" alt="Producto 1" />
@@ -277,6 +277,10 @@
                     </div>
                 `;
                 contenedor.appendChild(tarjeta);
-            })
+                tarjeta.addEventListener(`click`,() => {
+                    //creamos el parametro codigo = id del producto
+                    window.location.href = `detalle1.html?codigo=${producto.id}`;
+                });
+            });
         })
 </script>

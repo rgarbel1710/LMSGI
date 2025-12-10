@@ -166,39 +166,71 @@
     </article>
 </main>
 <script>
+function generarEstrellas(valoracion) {
+    let html = "";
+    for (let i = 1; i <= 5; i++) {
+        html += i <= Math.round(valoracion)
+            ? '<i class="fa-solid fa-star"></i>'
+            : '<i class="fa-regular fa-star"></i>';
+    }
+    return html;
+}
 
-fetch("data1/detalle.json")
-    .then(res => res.json())
-    .then(producto => {
+// 1. Obtener ID del producto desde URL
+const urlParams = new URLSearchParams(window.location.search);
+const idProd = parseInt(new URLSearchParams(window.location.search).get('codigo'));
 
-        // Título
+console.log("ID recibido:", idProd);
+
+// 2. Leer JSON con productos
+fetch('data1/productos.json')
+    .then(response => response.json())
+    .then(productos => {
+        const producto = productos.find(p => p.id === idProd);
+
+        if (!producto) {
+            document.body.innerHTML = "<h2>Producto no encontrado</h2>";
+            return;
+        }
+
+        // 3. Llenar HTML con los datos del producto
         document.getElementById("nombre-producto").textContent = producto.nombre;
+        document.getElementById("precio-final").textContent = producto.precio + " €";
+        document.getElementById("precio-original").textContent = producto.precioOriginal + " €";
+        document.getElementById("descuento").textContent = "-" + producto.descuento + "%";
 
-        // Precios y descuento
-        document.getElementById("precio-final").textContent = producto.precioFinal;
-        document.getElementById("precio-original").textContent = producto.precioOriginal;
-        document.getElementById("descuento").textContent = producto.descuento;
+        document.getElementById("calificacion").textContent = producto.valoracion;
+        document.getElementById("opiniones").textContent = producto.opiniones + " opiniones";
+        document.querySelector(".stars").innerHTML = generarEstrellas(producto.valoracion);
 
-        // Valoraciones
-        document.getElementById("opiniones").textContent = producto.opiniones;
-        document.getElementById("calificacion").textContent = producto.calificacion;
+        document.getElementById("Capacidad").textContent = producto.caracteristicas.disco;
 
-        // Capacidad
-        document.getElementById("Capacidad").textContent = producto.capacidad;
+        document.getElementById("imagen-principal").src = producto.imagen;
 
-        // Imagen principal
-        document.getElementById("imagen-principal").src = producto.imagenPrincipal;
-
-        // Galeria
-        const miniaturas  = document.querySelectorAll(".galeria img");
-        producto.galeria.forEach((img, i) => {
-            if (miniaturas[i]) miniaturas[i].src = img;
-        });
+        // 4. Galería (solo si existe en JSON)
+        const galeria = document.querySelector(".galeria");
+        galeria.innerHTML = ""; // limpiar imágenes anteriores
+        if (producto.galeria) {
+            producto.galeria.forEach(img => {
+                const mini = document.createElement("img");
+                mini.src = img;
+                mini.alt = producto.nombre;
+                mini.addEventListener("click", () => {
+                    document.getElementById("imagen-principal").src = img;
+                });
+                galeria.appendChild(mini);
+            });
+        } else {
+            // si no hay galería, solo ponemos la imagen principal
+            const mini = document.createElement("img");
+            mini.src = producto.imagen;
+            mini.alt = producto.nombre;
+            galeria.appendChild(mini);
+        }
     })
     .catch(error => console.error("Error cargando producto:", error));
-    
-    
 </script>
+
 </body>
 </html>
 
