@@ -1,0 +1,14 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+    display: block;
+}
+header{
+    background-color: green;
+    color: white;
+}
+h1{
+  text-align: center;
+}
