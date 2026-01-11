@@ -4,30 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portfolio</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/estilos.css">
 
 </head>
 <body>
     <header> 
         <figure>
-            <img scr="portfolio1/imagenes/logo.png" alt="logo" />
+            <img src="imagenes/logo.png" alt="logo">
          </figure>
 
         <h1>Mi Pagina web</h1>
         <nav>
-            <a href="#">Inicio</a>
-            <a href="#">Sobre mí</a>
-            <a href="#">Proyectos</a>
-            <a href="#">Servicios</a>
-            <a href="#">Contacto</a>
-
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#trabajos">Trabajos </a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
         </nav>
     </header>
     <main>
-        <p>Cuerpo del portfonlio</p>
+    <!-- Inicio -->
+    <section id="inicio">
+        <h2>Bienvenido a mi portfolio</h2>
+        <p>Este va a ser el cuerpo principal  del portfolio para clase donde iré añadiendo mis trabajos</p>
+    </section> 
+    <!-- Sobre mí -->
+   <section id="sobre-mi">
+        <h2>Sobre mí</h2>
+        <p>Soy un estudiante aprendiendo desarrollo web, aunque mi grado es ASIR. Aquí pondré una breve descripción mía.</p>
+    </section>
+    <!-- Proyectos -->
+    <section id="proyectos">
+        <h2>Mis Proyectos</h2>
+    <div class="proyectos-grid">
+        <article class="card">
+            <h3>Proyecto 1</h3>
+            <p>Descripción corta del proyecto.</p>
+        </article>
+        
+        <article class="card">
+            <h3>Proyecto 2</h3>
+            <p>Descripción corta del proyecto.</p>
+        </article>
+
+        <article class="card">
+            <h3>Proyecto 3</h3>
+            <p>Descripción corta del proyecto.</p>
+        </article>
+    </div>
+    </section>
+    <!-- Servicios -->
+     <section id="servicios">
+        <h2>Servicios</h2>
+    <ul>
+        <li>Diseño Web básico</li>
+        <li>Maquetación HTML y CSS</li>
+        <li>Edición de imágenes</li>
+    </ul>
+    </section>
+    <!-- Contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+    <form>
+        <label>Nombre:</label>
+        <input type="text" placeholder="Tu nombre">
+
+        <label>Correo:</label>
+        <input type="email" placeholder="Tu correo">
+
+        <label>Mensaje:</label>
+        <textarea placeholder="Escribe tu mensaje"></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+    </section>
     </main>
+    
     <footer>
-        <p>&copy; 2025 - Portfolio personal</p>
+        <p> 2025 - Portfolio personal</p>
     </footer>
 </body>
 </html>
