@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #eaf7ff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+
+header {
+    height: 12vh;
+    background-color: #2479ba;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    color: white;
+}
+
+header figure {
+    height: 70%;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+header figure img {
+    height: 100%;
+}
+
+header h1 {
+    color: #ffd4f0;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 12px;
+    font-size: 18px;
+    border: 1px solid rgba(255,255,255,0.5);
+    padding: 8px 12px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+header nav a:hover {
+    background-color: rgba(255,255,0,0.4);
+    transform: scale(1.05);
+}
+
+/* MAIN */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px;
+}
+
+main section {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: #f6cece;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+main section:hover {
+    transform: translateY(-4px);
+}
+
+h2 {
+    margin-bottom: 18px;
+    color: #024873;
+    font-size: 1.8rem;
+}
+
+/* PROYECTOS */
+
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #f9f9f9;
+    padding: 22px;
+    border-radius: 12px;
+    border-left: 5px solid #04b20c;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.04);
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+/* HABILIDADES */
+
+.habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.habilidad {
+    background-color: #ffffff;
+    padding: 12px 18px;
+    border-radius: 20px;
+    border: 2px solid #2479ba;
+    font-size: 16px;
+}
+
+/* FORMULARIO */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+input {
+    padding: 8px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+textarea {
+    padding: 8px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input:focus {
+    border: 1px solid #2479ba;
+}
+
+textarea:focus {
+    border: 1px solid #2479ba;
+}
+
+button {
+    padding: 10px;
+    background-color: #2479ba;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1e6399;
+}
+
+/* FOOTER */
+
+footer {
+    height: 10vh;
+    background-color: lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
