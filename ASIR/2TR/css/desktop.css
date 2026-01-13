@@ -1,0 +1,21 @@
+header nav{
+    flex-wrap: wrap;
+}
+
+header h1{
+    flex-basis: 100%;
+    order: 1;
+}
+
+header nav{
+    flex-basis: 80%;
+    order: 3;
+    justify-content: center;
+}
+
+header button{
+    flex-basis: 10%;
+    order: 2;
+}
+
+/* display: none; oculta ese contenedor */
