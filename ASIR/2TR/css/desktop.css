@@ -1,21 +1,201 @@
-header nav{
-    flex-wrap: wrap;
+header{
+     display: flex; /*convierte el header en un contenedor flexbox */
+    flex-direction: column; /* los elementos dentro del header se apilan verticalmente (uno debajo del otro). */
+    flex-wrap: nowrap;/*los elementos no se moverán a otra línea aunque el espacio sea pequeño.*/
+    background-color: rgb(25, 121, 189);
+    color: white;
+    padding: 10px; /*espacio interno*/
+    text-align: center;
 }
-
 header h1{
-    flex-basis: 100%;
-    order: 1;
+    border: 0px solid black;
+    margin-top: 10px;
 }
 
 header nav{
-    flex-basis: 80%;
-    order: 3;
-    justify-content: center;
+    flex-direction: row;    
+    justify-content: space-between; /*space-between → separa los elementos del menú horizontalmente, dejando espacio entre ellos.*/
+    align-items: center; /*alinea verticalmente los elementos al centro.*/
 }
 
-header button{
-    flex-basis: 10%;
+header nav{
+    display: block; /*anula el flexbox anterior, lo que puede generar problemas si quieres que siga usando flex.*/
+    flex-direction: row; /*ya no tiene efecto con display: block.*/
+    padding: 15px; /*agregan espacio interno y separación respecto al header.*/
+    /* gap: 50px; */
+    margin-top: 15px;
+}
+
+header nav a {
+    border-radius: 5px;
+    padding-left: 30px;
+    padding-top: 10px;  
+    padding-bottom: 10px;
+    padding-right: 30px;
+}
+
+header button {
+    margin-bottom: 15px;
+    background-color: rgb(228, 110, 183);
+}
+
+main{
+    display: block; /*elemento de bloque (ocupa todo el ancho disponible).*/
+    position: relative; /*permite posicionar elementos internos con position: absolute.*/
+    /* height: 100%; */
+    width: 100%;
+    padding-left: 30%; /*deja espacio a la izquierda para un menú lateral.*/
+    box-sizing: border-box; /* muy bueno, para que se englobe en la mima caja tanto el propio contenido como el padding, margin,etec. 
+    incluye padding dentro del ancho total, evitando que el contenido se “desborde”.*/
+}
+
+main nav{
+    position: absolute;
+    /* estriamos el menu lateral, para ocupar todo el largo del main*/
+    left: 0;
+    top: 1%;
+    bottom: 0;
+
+    width: 28%;
+    height: 98%;
+    
+    margin-left: 20px;
+    background-color: rgb(235, 234, 234);
+    border-radius: 10px;
+}
+
+main nav a{
+    padding: 8px;
+}
+
+main section{
+    margin-left: 20px;
+}
+
+main section h3{
+    margin-top: 5px;
+}
+
+main section{
+    gap: 16px;
+}
+
+main section ul{
+    margin-top: 2px;
+}
+
+main section li{
+    line-height: 1.7; /* Esto separa la línea de arriba del texto con la de abajo */
+}
+
+main section li strong{
+    margin-right: 5px;
+}
+
+main aside {
+    border: 0px solid red;
+    display: block;
+    /* flex-direction: column; */
+    padding: 15px;
+    background-color: rgb(51, 152, 218);
+    color: white;
+
+    margin-left: 5%;
+    margin-right: 4%;
+    border-radius: 10px;
+
+}
+
+footer{
+    display: block; /* necesitamos usar block para que no se generen espacios raros entre los hijos */
+    position: relative;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    align-items: start;
+    background-color:rgb(25, 121, 189);
+    color: white;
+    margin-top: 30px;
+    padding-top: 40px;
+    width: 100%;
+}
+
+footer h2{
+    display: flex;
+    align-items: flex-end;
+    /* padding-bottom: 15px; */
+
+    /* margin-top: 10px; */
+    height: 50px;
+    width: 50%;
+    
+    order: 1;
+    border: 0px solid red;
+}
+
+footer nav{
+    
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-bottom: 20px; 
+    width: 50%;
+    order: 2;
+    border: 0px solid red;
+}
+
+footer nav a {
+    text-decoration: none;
+    border: 0px solid red;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+footer nav a button{
+    display: block;
+    height: 30px;
+    width: 70px;
+    border-radius: 5px;
+    background-color: rgb(44, 62, 80);
+    color: white;
+    border: 1px solid black;
+}
+
+footer div{
+    display: block;
+    position: absolute;
+
+    left: 54%;
+    
+    top: 10%;
+    bottom: 0;
+
+    flex-direction: column;
+    order: 3;
+    border: 0px solid red;
+}
+
+footer div h2{
+    border: 0px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px; /*solucion: cuando no se centra el texto, es eliminar todos los padding y se que solo con el padding heredero */
+    margin-bottom: 0px;
+
     order: 2;
 }
 
-/* display: none; oculta ese contenedor */
+footer div p{
+    border: 0px solid red;
+    display: flex;
+    padding: 3px;
+
+    order: 2;
+
+    
+}
+

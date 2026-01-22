@@ -1,7 +1,7 @@
-/* ============================================
+/* 
    MOVIL.CSS - Estilos base (Mobile First)
    Estos estilos se aplican a TODOS los dispositivos
-   ============================================ */
+    */
 
 * {
     box-sizing: border-box;
@@ -10,12 +10,12 @@
 }
 
 header {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    background-color: rgb(0, 57, 97);
+    display: flex; /*convierte el header en un contenedor flexbox */
+    flex-direction: column; /* los elementos dentro del header se apilan verticalmente (uno debajo del otro). */
+    flex-wrap: nowrap;/*los elementos no se moverán a otra línea aunque el espacio sea pequeño.*/
+    background-color: rgb(25, 121, 189);
     color: white;
-    padding: 10px;
+    padding: 10px; /*espacio interno*/
     text-align: center;
 }
 
@@ -24,17 +24,17 @@ header h1{
 }
 
 header figure{
-    display: none;
+    display: none; /*oculto en moviles, sino aparece tambien en el movil */
 }
 
-header nav {
+header nav { /*contenedor de enlaces de navegación, vertical en móviles.*/
     border: 0px solid black;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
 }
 
-header nav a {
+header nav a { 
     color: white;
     margin-top: 10px;
     padding: 10px;
@@ -42,34 +42,34 @@ header nav a {
     border: 0px solid black;
 }
 
-header nav a:hover {
-    text-decoration: underline;
+header nav a:hover { /*cambia el estilo al pasar el cursor*/
+    text-decoration: double;
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-header button {
+header button { /*botón rojo con bordes redondeados y cursor “pointer” para indicar clicable.*/
     margin-top: 10px;
     padding: 10px;
-    background-color: red;
+    background-color: rgb(228, 110, 183);
     color: white;
     border-radius: 5px;
     border: none;
     cursor: pointer;
 }
 
-main{
-    display: flex;
+main{ /*Cada sección dentro de main se apila verticalmente.*/
+    display: flex; /*flex + flex-direction: column → todo el contenido principal se apila verticalmente en móviles.*/
     flex-direction: column;
-    text-align: start;
+    text-align: start; /*alinea el texto a la izquierda (o inicio de línea según idioma).*/
 }
 
-main nav{
+main nav{ /*caja de menú dentro del main.*/
     border: 1px solid black;
     display: flex;
     flex-direction: column;
     margin: 10px;
     padding-left: 10px;
-    background-color: rgb(235, 234, 234);
+    background-color: rgb(240, 111, 169);
     border-radius: 10px;
 }
 
@@ -78,12 +78,12 @@ main nav h3 {
     border: 0px solid black;
     margin-top: 10px;
     margin-bottom: 7px;
-    color: rgb(57, 57, 184);   
+    color: rgb(186, 49, 118);   
     font-weight: 900;
-    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-main nav a{
+main nav a{ /*enlaces dentro del menú sin subrayado, con algo de padding.*/
     text-decoration: none;
     padding: 3.5px;
 }
@@ -103,7 +103,7 @@ main section h3{
     margin-bottom: 5px;
     color: rgb(57, 57, 184);   
     font-weight: 900;
-    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 main section h5{
@@ -113,7 +113,7 @@ main section h5{
     /* margin-top: 10px; */
     margin-bottom: 5px;
     color: black;
-    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 15px;
 }
 
@@ -140,7 +140,7 @@ main section li{
     border: 0px solid red;
     margin-left: 25px;
     font-size: 11.6px;
-    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 main aside {
@@ -155,7 +155,7 @@ main aside h2{
     display: flex;
     margin-bottom: 10px;
     font-weight: 900;
-    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
 }
 
@@ -174,14 +174,13 @@ main aside li{
     border: 0px solid red;
     margin-left: 30px;
     font-size: 13px;
-    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
-footer{
+footer{ /*El footer se centra y organiza verticalmente.*/
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(52, 72, 94);
+    background-color: rgb(25, 121, 189) ;
     color: white;
     margin-top: 30px;
     padding: 20px;
@@ -203,7 +202,7 @@ footer nav a {
 }
 
 footer nav a:hover {
-    text-decoration: underline;
+    text-decoration: solid;
     text-decoration-color: white;
 }
 
@@ -212,7 +211,7 @@ footer nav a button{
     height: 30px;
     width: 70px;
     border-radius: 5px;
-    background-color: rgb(44, 62, 80);
+    background-color: rgb(243, 109, 200);
     color: white;
     border: 1px solid black;
 }

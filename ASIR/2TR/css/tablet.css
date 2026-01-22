@@ -6,14 +6,14 @@ header h1{
 
 header nav{
     flex-direction: row;    
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /*space-between → separa los elementos del menú horizontalmente, dejando espacio entre ellos.*/
+    align-items: center; /*alinea verticalmente los elementos al centro.*/
 }
 
 header nav{
-    display: block;
-    flex-direction: row;
-    padding: 15px;
+    display: block; /*anula el flexbox anterior, lo que puede generar problemas si quieres que siga usando flex.*/
+    flex-direction: row; /*ya no tiene efecto con display: block.*/
+    padding: 15px; /*agregan espacio interno y separación respecto al header.*/
     /* gap: 50px; */
     margin-top: 15px;
 }
@@ -31,18 +31,17 @@ header button {
 }
 
 main{
-    display: block;
-    position: relative;
+    display: block; /*elemento de bloque (ocupa todo el ancho disponible).*/
+    position: relative; /*permite posicionar elementos internos con position: absolute.*/
     /* height: 100%; */
     width: 100%;
-    padding-left: 30%;
-
-    box-sizing: border-box; /* muy bueno, para que se englobe en la mima caja tanto el propio contenido como el padding, margin,etec. */
+    padding-left: 30%; /*deja espacio a la izquierda para un menú lateral.*/
+    box-sizing: border-box; /* muy bueno, para que se englobe en la mima caja tanto el propio contenido como el padding, margin,etec. 
+    incluye padding dentro del ancho total, evitando que el contenido se “desborde”.*/
 }
 
 main nav{
     position: absolute;
-    
     /* estriamos el menu lateral, para ocupar todo el largo del main*/
     left: 0;
     top: 1%;
@@ -105,7 +104,7 @@ footer{
     flex-wrap: wrap;
 
     align-items: start;
-    background-color: rgb(52, 72, 94);
+    background-color:rgb(25, 121, 189);
     color: white;
     margin-top: 30px;
     padding-top: 40px;
@@ -151,7 +150,8 @@ footer nav a button{
     height: 30px;
     width: 70px;
     border-radius: 5px;
-    background-color: rgb(44, 62, 80);
+    background-color: rgb(228, 110, 183);
+    color: white;;
     color: white;
     border: 1px solid black;
 }
@@ -187,4 +187,6 @@ footer div p{
     padding: 3px;
 
     order: 2;
+
+    
 }

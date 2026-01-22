@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design  - Mobile First</title>
+    <!-- Mobile First: 1º Se carga el css para moviles: movil.css-->
+     <link rel="stylesheet" href="css/movil.css" media="screen and (max-width: 768px)">
+     <!--Tablet Second: 2º Se carga el css para tablets: tablet.css
+         tablet.css se cargara a traves de la Media Query si el medio es una pantalla
+         el ancho de la pantalla es mayor o igual a 768px 
+     -->
+     <link rel="stylesheet" href="css/tablet.css" media="screen and (min-width: 768px)">
+     <link rel="stylesheet" href="css/desktop.css" media="screen and (min-width: 1024px)">
+</head>
+<body>
+   <div class="container">
+    <header>
+        <div class="oferta">Oferta</div>
+        <figure>
+            logo
+        </figure>
+        <h1>
+            título
+        </h1>
+        <div id="registro">
+            registro
+        </div>
+        <nav>
+            menu ppal
+        </nav>
+    </header>
+
+   </div>          
+    <main>
+        <header>
+            header main
+        </header>
+        <nav id="categorias">
+            nav categorias
+        </nav>
+        <section>
+            section categorias
+            <article></article>
+            <article></article>
+            <article></article>
+            <article></article>
+            <article></article>
+            <article></article>
+        </section>
+        <aside>
+            aside main
+        </aside>
+    </main>
+</body>
+<footer>
+    <section id="sociales">sociales</section>
+    <section id="mapa">mapa</section>
+</footer>
+</html>
