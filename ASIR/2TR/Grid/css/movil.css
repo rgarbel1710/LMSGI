@@ -22,6 +22,7 @@ header .oferta{
    color: white;
    grid-area: oferta;
 }
+
 header figure {
     background-color: orange;
     grid-area: logo;

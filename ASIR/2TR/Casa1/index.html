@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design  - Mobile First</title>
+    <!-- Mobile First: 1º Se carga el css para moviles: movil.css-->
+     <link rel="stylesheet" href="css/movil.css" media="screen and (max-width: 768px)">
+     <!--Tablet Second: 2º Se carga el css para tablets: tablet.css
+         tablet.css se cargara a traves de la Media Query si el medio es una pantalla
+         el ancho de la pantalla es mayor o igual a 768px 
+     -->
+     <link rel="stylesheet" href="css/tablet.css" media="screen and (min-width: 768px)">
+     <link rel="stylesheet" href="css/desktop.css" media="screen and (min-width: 1024px)">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo">
+      <div>
+        <h1>La casa de tus sueños</h1>
+        <span>Inmobiliaria La Laguna</span>
+      </div>
+    </div>
+
+    <div class="contacto">
+      <p>📞 629 76 03 03</p>
+      <p>✉️ info@yoursite.com</p>
+    </div>
+  </header>
+
+  <!-- NAV -->
+  <nav class="menu">
+    <a href="#">Home</a>
+    <a href="#">Viviendas</a>
+    <a href="#">Noticias</a>
+    <a href="#">Presupuesto</a>
+  </nav>
+
+  <!-- CONTENIDO -->
+  <main class="contenedor">
+    <h2>Viviendas en Mojácar</h2>
+
+    <section class="tarjeta">
+      <img src="img/casa.jpg" alt="Apartamento">
+      <div class="info">
+        <h3>Apartamento Venta Los Delfines, Mojácar</h3>
+        <div class="datos">
+          <span>📐 67m²</span>
+          <span>🛁 2</span>
+          <span>🛏 3</span>
+          <strong>59.000 €</strong>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

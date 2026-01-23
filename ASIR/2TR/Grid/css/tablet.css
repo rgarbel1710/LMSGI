@@ -9,11 +9,10 @@ header {
     background-color: blue;
     display: grid;
     grid-template-areas: 
-    "oferta oferta oferta"
-    "logo titulo titulo"
-    "navppal navppal registro" ;
-    grid-template-columns: 2fr 6fr 2fr;
-    grid-template-rows: 30px 100px 50px;
+    "logo titulo titulo registro"
+    "navppal navppal  oferta oferta" ;
+    grid-template-columns: 2fr 3fr 3fr 2fr;
+    grid-template-rows: 100px 100px;
     gap: 5px;
     padding: 5px;
 }
