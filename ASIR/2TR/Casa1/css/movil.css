@@ -1,4 +1,4 @@
-/* RESET */
+
 * {
   box-sizing: border-box;
   font-family: Arial, sans-serif;
@@ -9,11 +9,8 @@ body {
   background: #f4f4f4;
 }
 
-/* ======================
-   📱 MÓVIL (DEFAULT)
-====================== */
 
-/* HEADER */
+
 .header {
   display: flex;
   flex-direction: column;
@@ -36,7 +33,7 @@ body {
   font-size: 14px;
 }
 
-/* MENU */
+
 .menu {
   display: flex;
   flex-direction: column;
@@ -51,12 +48,11 @@ body {
   font-weight: bold;
 }
 
-/* CONTENIDO */
 .contenedor {
   padding: 15px;
 }
 
-/* TARJETA */
+
 .tarjeta {
   display: flex;
   flex-direction: column;

@@ -1,20 +1,94 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Responsive Web Design - Mobile first</title>
-  <!-- Mobile first: 1º se carga el csspara móviles: movil.css-->
-  <link rel="stylesheet" href="css/movil.css">
-  <!--
-      Luego se carga el css para tablets: tablet.css
-      tablet.css se cargará a traves de la media query si el medio es una pantalla y
-      el ancho de la pantalla es mayor igual a 768px
-  -->
-
-  <link rel="stylesheet" href="css/tablet.css" media="screen and (min-width:768px)">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design  - Mobile First</title>
+    <!-- Mobile First: 1º Se carga el css para moviles: movil.css-->
+     <link rel="stylesheet" href="RWD/css/movil.css" media="screen and (max-width: 768px)">
+     <!--Tablet Second: 2º Se carga el css para tablets: tablet.css
+         tablet.css se cargara a traves de la Media Query si el medio es una pantalla
+         el ancho de la pantalla es mayor o igual a 768px 
+     -->
+     <link rel="stylesheet" href="RWD/css/tablet.css" media="screen and (min-width: 768px)">
+     <link rel="stylesheet" href="RWD/css/desktop.css" media="screen and (min-width: 1024px)">
 </head>
 <body>
     <header>
-        <h1>Responsive Web Design - Mobile first</h1>
+        <h1>Responsive Web Design - Mobile First</h1>
+        <figure>
+           <!--<img width="100px" src="imagen/png-clipart-logo-idea-cute-eagle-leaf-logo-thumbnail.png" alt="Logo de la empresa">--> 
+        </figure>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Servicios</a>
+            <a href="#">Acerca de</a>
+            <a href="#">Contacto</a>
+        </nav>  
+        <button>Registrarse</button>
     </header>
-</body> 
+    <main>
+        <nav>
+            <h3>Menú Lateral</h3>
+            <a href="#">📱 Categoria 1</a>
+            <a href="#">💻 Categoria 2</a>          
+            <a href="#">🎨 Categoria 3</a>            
+            <a href="#">📊 Categoria 4</a> 
+            <a href="#">⚙️ Configuración</a>           
+        </nav>
+        <section>
+            <h3>Contenido Principal</h3>
+
+            <h5>Responsive Web Design con Mobile First</h5>
+
+            <p>Este diseño adapta su estructura según el tamaño de las pantalla:</p>
+            <ul>
+                <!-- si ponemos dentro del p, strong, etc estos simbolos <, > y => el html se confunde y piensa que voy a escribir eso para escribir un contenedor por lo que para solucionar esto y que se escriban esos simbolos debemos de escribir pa este simbolo <estoo &lt; (viene de less than), pa este > esto &gt; (viene de greater than) y pa este ≥ 1023 esto  (Mayor o igual que)-->
+                <li>📱 <strong>Móvil (&lt;768px):</strong> Layout vertical, todo en columna</li> 
+                <li>📟 <strong>Tablet (768px - 1023px):</strong> Grid 2 columnas, menú lateral + contenido/aside apilados</li> 
+                <li>💻 <strong>Desktop (&ge;1024px):</strong> Grid 3 columnas, todas visibles simultáneamente</li> 
+            </ul>
+            
+            <p>Los estilos se cargan en cascada: primero móvil (base), luego tablet, finalmente desktop.</p>
+            
+            <p>Esta estructura utiliza tres archivos CSS separados en la carpeta <code>css/</code>:</p>
+            <ul>
+                <li><code>movil.css</code> - Estilos base para todos los dispositivos</li> 
+                <li><code>tablet.css</code> - Estilos adicionales para tablets (&ge;768px)</li> 
+                <li><code>desktop.css</code> - Estilos adicionales para escritorio (&ge;1024px)</li> 
+            </ul>
+        </section>
+
+        <aside>
+            <h2>Información Adicional</h2>
+            <p>Este es el área de contenido complementario que puede contener:</p>
+            <ul>
+                <li>Publicidad</li>
+                <li>Enlaces relacionados</li>
+                <li>Widgets</li>
+                <li>Noticias destacadas</li>
+            </ul>
+        </aside>
+    </main>
+</body>
+<footer>
+    <h2>Síguenos</h2>
+
+    <nav>
+        <a href="#"><button>Facebook</button></a>
+        <a href="#"><button>Twitter</button></a>
+        <a href="#"><button>Instagram</button></a>
+        <a href="#"><button>Linkedin</button></a>
+    </nav>
+
+    <div>
+        <h2>Contacto</h2>
+        
+        <p>🗒️ info@misitio.com</p>
+        <p>📱 +34 123 456 789</p>
+        <p>📍 Madrid, España</p>
+
+    </div>
+
+</footer>
+</html>

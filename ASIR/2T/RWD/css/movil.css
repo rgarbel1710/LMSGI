@@ -1,14 +1,97 @@
-*{
-  margin: 0;
-  box-sizing: border-box;
+/* ===== RESET ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-body{
-    display: block;
-}
-header{
-    background-color: green;
+
+/* ===== HEADER ===== */
+header {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    gap: 10px;
+    background-color: rgb(25, 121, 189);
     color: white;
+    padding: 15px;
+    text-align: center;
 }
-h1{
-  text-align: center;
+
+header figure {
+    display: none;
+}
+
+header nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+header button {
+    background-color: rgb(228, 110, 183);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* ===== MAIN ===== */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 15px;
+}
+
+/* menú lateral */
+main nav {
+    background-color: rgb(240, 111, 169);
+    border-radius: 10px;
+    padding: 15px;
+    display: grid;
+    gap: 8px;
+}
+
+/* contenido */
+main section {
+    display: grid;
+    gap: 15px;
+}
+
+/* aside */
+main aside {
+    background-color: rgb(51, 152, 218);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    background-color: rgb(25, 121, 189);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+footer nav button {
+    background-color: rgb(243, 109, 200);
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
 }
