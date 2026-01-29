@@ -1,34 +1,27 @@
+header nav.numero,
+header nav.login{
+    justify-content: flex-start;
+}
 
-
-  .header {
+header div.buttons{
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-  }
+}
 
-  .menu {
+header button.tipo1,
+header button.tipo2{
+    width: 48%;
+}
+
+header nav.listado{
     flex-direction: row;
-    justify-content: center;
-    gap: 40px;
-  }
+    justify-content: space-around;
+}
 
-  .tarjeta {
-    flex-direction: row;
-  }
-
-  .tarjeta img {
-    width: 40%;
-  }
-
-  .datos {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-
-
- 
-
-
-
+header div.arrow{
+    display: none;
+}
+.casa{
+    max-width: 600px;
+    margin: auto;
+}
