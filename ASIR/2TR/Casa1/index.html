@@ -3,60 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Web Design  - Mobile First</title>
-    <!-- Mobile First: 1º Se carga el css para moviles: movil.css-->
-     <link rel="stylesheet" href="css/movil.css" media="screen and (max-width: 768px)">
-     <!--Tablet : 2º Se carga el css para tablets: tablet.css
-         tablet.css se cargara a traves de la Media Query si el medio es una pantalla
-         el ancho de la pantalla es mayor o igual a 768px 
-     -->
+    <title>La Casa de tus sueños</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!-- Debemos de Desactivar el media para movil para que Funcione de Forma natural el Mobile First Design
+    Esto lo hacemos para que teniendo de base el movil.css sea el mismo para los demas dispositivos
+    y si queremos que cambie por ejemplo el desktop modifiquemos solo el codigo necesario
+    sin necesidad de reescribirlo todo -->
+     <link rel="stylesheet" href="css/movil.css">
      <link rel="stylesheet" href="css/tablet.css" media="screen and (min-width: 768px)">
      <link rel="stylesheet" href="css/desktop.css" media="screen and (min-width: 1024px)">
 </head>
 <body>
-
-  
-  <header class="header">
-    <div class="logo">
-      <img src="img/logo.png" alt="Logo">
-      <div>
-        <h1>La casa de tus sueños</h1>
-        <span>Inmobiliaria La Laguna</span>
-      </div>
-    </div>
-
-    <div class="contacto">
-      <p>📞 629 76 03 03</p>
-      <p>✉️ info@yoursite.com</p>
-    </div>
-  </header>
+    <header>
 
 
-  <nav class="menu">
-    <a href="#">Home</a>
-    <a href="#">Viviendas</a>
-    <a href="#">Noticias</a>
-    <a href="#">Presupuesto</a>
-  </nav>
+        <nav class="sociales">
+            <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </nav>
 
-  
-  <main class="contenedor">
-    <h2>Viviendas en Mojácar</h2>
 
-    <section class="tarjeta">
-      <img src="img/casa.jpg" alt="Apartamento">
-      <div class="info">
-        <h3>Apartamento Venta Los Delfines, Mojácar</h3>
-        <div class="datos">
-          <span>📐 67m²</span>
-          <span>🛁 2</span>
-          <span>🛏 3</span>
-          <strong>59.000 €</strong>
+        <nav class="numero">
+            <span><i class="fa-solid fa-phone"></i>629 76 03 03</span> <!-- aqui no combie usar el p porque este es un elemnto de bloque  y el span es mucho mas simple-->
+            <a href="#">Te llamamos</a>
+        </nav>
+
+
+        <nav class="login">
+            <span><i class="fa-solid fa-arrow-right-to-bracket"></i></span> <!-- aqui no combie usar el p porque este es un elemnto de bloque  y el span es mucho mas simple-->
+            <a href="#">Login</a>
+        </nav>
+
+
+        <div class="menu">
+            <img width="100px" src="img/logo.png" alt="Logo Empresa">
+            <div class="textos">
+                <h1>La Casa de tus sueños</h1>
+                <p>Inmoviliaria la Laguna</p>
+            </div>
         </div>
-      </div>
-    </section>
 
-  </main>
 
+        <div class="buttons">
+            <button class="tipo1">123 QuickSale Street Chicago, IL 60606</button>
+            <button class="tipo2">123-456-7890 info@yoursite.com</button>
+        </div>
+
+
+        <div class="icono">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+
+        <nav class="listado">
+            <a href="#">Home</a>
+            <a href="#">Viviendas</a>
+            <a href="#">Noticias</a>
+            <a href="#">Presupuesto</a>
+        </nav>
+
+
+        <div class="arrow">
+            <i class="fa-solid fa-angle-down"></i>
+            <i class="fa-solid fa-angle-down"></i>
+            <i class="fa-solid fa-angle-down"></i>
+            <i class="fa-solid fa-angle-down"></i>
+        </div>
+
+
+    </header>
+    <main>
+        <h4>Viviendas en Mojacar</h4>
+    </main>
 </body>
 </html>
+
