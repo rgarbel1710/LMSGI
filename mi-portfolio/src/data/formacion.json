@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "titulo": "React - The Complete Guide",
+    "plataforma": "Openwebvinars",
+    "fecha": "2026",
+    "descripcion": "Curso completo de React incluyendo Hooks, Context API.",
+    "icono": "R",
+    "certificado": true
+  },
+  {
+    "id": 2,
+    "titulo": "SQL",
+    "plataforma": "Openwebinars",
+    "fecha": "2026",
+    "descripcion": "Formacion en bases de datos.",
+    "icono": "BSD",
+    "certificado": true
+  },
+    {
+    "id": 3,
+    "titulo": "JavaScript",
+    "plataforma": "Openwebinars",
+    "fecha": "2026",
+    "descripcion": "Formacion en Java.",
+    "icono": "BSD",
+    "certificado": true
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "puesto": "En busca de practicas",
+    "empresa": "Disponible",
+    "fecha": "2026",
+    "descripcion": "Actualmente cursando 1º año de Administracion de Sistemas en Red y en busca de empresa para realizar las practicas.",
+    "tecnologias": ["Redes", "Linux", "Windows Server", "TypeScript"],
+    "icono": "P"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "titulo": "Administracion de sistemas en red",
+    "centro": "IES Cura Valera",
+    "fecha": "2025- 2026",
+    "tipo": "FP Superior",
+    "descripcion": "Ciclo formativo de grado superior especializado en administracion de redes.",
+    "icono": "FP"
+  },
+  {
+    "id": 2,
+    "titulo": "Bachillerato Humanidades",
+    "centro": "IES Martin Garcia Ramos",
+    "fecha": "2022 - 2024",
+    "tipo": "Bachillerato",
+    "descripcion": "Bachillerato con especialidad en Humanidades, con TIC",
+    "icono": "BAC"
+  }
+]

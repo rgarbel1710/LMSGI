@@ -1,0 +1,10 @@
+[
+  { "name": "React", "level": 70, "icon": "R", "color": "#61dafb" },
+  { "name": "TypeScript", "level": 60, "icon": "TS", "color": "#3178c6" },
+  { "name": "JavaScript", "level": 75, "icon": "JS", "color": "#f7df1e" },
+  { "name": "CSS", "level": 80, "icon": "CSS", "color": "#c4714a" },
+  { "name": "HTML", "level": 85, "icon": "HTML", "color": "#e34c26" },
+  { "name": "SQL", "level": 65, "icon": "SQL", "color": "#8a9e7a" },
+  { "name": "Java", "level": 55, "icon": "Java", "color": "#f8981d" },
+  { "name": "Git", "level": 60, "icon": "Git", "color": "#f05032" }
+]
